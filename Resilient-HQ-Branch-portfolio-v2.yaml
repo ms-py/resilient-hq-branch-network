@@ -1,0 +1,733 @@
+annotations:
+- border_color: '#64748b'
+  border_style: ''
+  color: '#64748b'
+  rotation: 0
+  text_bold: false
+  text_content: 'Direct WAN: 10.255.0.0/30'
+  text_font: sans-serif
+  text_italic: false
+  text_size: 12
+  text_unit: pt
+  thickness: 1
+  type: text
+  x1: -170.0
+  y1: 40.0
+  z_index: 0
+- border_color: '#64748b'
+  border_style: ''
+  color: '#64748b'
+  rotation: 0
+  text_bold: false
+  text_content: 10.255.0.4/30
+  text_font: sans-serif
+  text_italic: false
+  text_size: 12
+  text_unit: pt
+  thickness: 1
+  type: text
+  x1: -360.0
+  y1: -160.0
+  z_index: 0
+- border_color: '#64748b'
+  border_style: ''
+  color: '#64748b'
+  rotation: 0
+  text_bold: false
+  text_content: 10.255.0.8/30
+  text_font: sans-serif
+  text_italic: false
+  text_size: 12
+  text_unit: pt
+  thickness: 1
+  type: text
+  x1: 150.0
+  y1: -160.0
+  z_index: 0
+- border_color: '#64748b'
+  border_style: ''
+  color: '#64748b'
+  rotation: 0
+  text_bold: false
+  text_content: 'HQ: 10.10.0.0/16
+
+    VLANs 10 Employees | 20 Servers | 30 Guests | 99 Management'
+  text_font: sans-serif
+  text_italic: false
+  text_size: 12
+  text_unit: pt
+  thickness: 1
+  type: text
+  x1: -550.0
+  y1: 540.0
+  z_index: 0
+- border_color: '#64748b'
+  border_style: ''
+  color: '#64748b'
+  rotation: 0
+  text_bold: false
+  text_content: 'Branch: 10.11.0.0/16
+
+    VLANs 10 Employees | 99 Management'
+  text_font: sans-serif
+  text_italic: false
+  text_size: 12
+  text_unit: pt
+  thickness: 1
+  type: text
+  x1: 200.0
+  y1: 540.0
+  z_index: 0
+smart_annotations: []
+nodes:
+- boot_disk_size: null
+  configuration:
+  - name: ios_config.txt
+    content: "!\n! Last configuration change at 21:39:14 UTC Fri Nov 6 2026\n!\nversion 17.18\nservice\
+      \ timestamps debug datetime msec\nservice timestamps log datetime msec\n!\nhostname HQ-R1\n!\nboot-start-marker\n\
+      boot-end-marker\n!\n!\nno logging console\nno aaa new-model\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n\
+      !\nip cef\nlogin on-success log\nno ipv6 cef\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\ncrypto pki trustpoint\
+      \ TP-self-signed-2039832\n enrollment selfsigned\n subject-name cn=IOS-Self-Signed-Certificate-2039832\n\
+      \ revocation-check none\n rsakeypair TP-self-signed-2039832\n hash sha512\n!\n!\ncrypto pki certificate\
+      \ chain TP-self-signed-2039832\n certificate self-signed 01\n  3082032A 30820212 A0030201 02020101\
+      \ 300D0609 2A864886 F70D0101 0D050030\n  2E312C30 2A060355 04030C23 494F532D 53656C66 2D536967 6E65642D\
+      \ 43657274\n  69666963 6174652D 32303339 38333230 1E170D32 36313130 36313433 3030355A\n  170D3336\
+      \ 31313035 31343330 30355A30 2E312C30 2A060355 04030C23 494F532D\n  53656C66 2D536967 6E65642D 43657274\
+      \ 69666963 6174652D 32303339 38333230\n  82012230 0D06092A 864886F7 0D010101 05000382 010F0030 82010A02\
+      \ 82010100\n  807E6E6B 59AAD084 AD7E79B0 A059D43F E09EA6C5 1E68274B 093988FA A61E41F8\n  8F5C0B5E\
+      \ D6D73321 88B4FB47 CC1319FE B5869EEC 8E9C4F0C D0310B62 2F37856D\n  0B7D2C2D 3BFC1AC7 B2943520 4E6CF24F\
+      \ 621834A1 354BC6DD 919E6511 AC5F40FD\n  1CEEB61F 1EC05647 19478A52 A4D23D86 5FBC98FB 74FC1FF1 735349E5\
+      \ E1B63A71\n  23B1EDF1 AEDCDFA7 D7347F85 865FAA0E A1AF9972 CEBE4333 2116C2F8 213B6F73\n  6F037D88\
+      \ F8783169 01511786 A5EC9D7D 86527889 EE1B269F 2696FDBD A071FC74\n  61B4F2F9 49239D8C D85F0B54 27C4B8B0\
+      \ D57F81E0 27D70B11 558D8283 13970A65\n  48E909E5 662065A4 45017973 C2093A3C 0B8D9DC7 74560A83 C0418BF3\
+      \ 845401EB\n  02030100 01A35330 51301D06 03551D0E 04160414 646BDB16 BE03BC63 F289C08A\n  859FC13F\
+      \ C4F9F0F9 301F0603 551D2304 18301680 14646BDB 16BE03BC 63F289C0\n  8A859FC1 3FC4F9F0 F9300F06 03551D13\
+      \ 0101FF04 05300301 01FF300D 06092A86\n  4886F70D 01010D05 00038201 01000891 254254D5 83614BE7 1A0DAD62\
+      \ 6E56E414\n  D9C29015 D91E94EE 2D3C23C9 7A018D25 9F1A53C1 D3FB7CFA 84621E27 80F36C43\n  23D2C12D\
+      \ 3D1941AB 33CB2443 6DB7223A 9E4DC79F 661AC02B A08A47C6 9F5A0418\n  E6CFE13C 344CAD8D 5E8C496C B098366F\
+      \ CD271775 90158EBB 49AE4E6D AC8F8BA0\n  46732851 A0509656 694ED05E 1F978D5C 4B639677 B7D85564 1223A4BB\
+      \ 1FFF8C9D\n  A7FCCAD8 C390BF9F 68E2FCF2 AB7D81CF 34C0314E 42344837 B208F0A8 AC19CBB4\n  49C5CA42\
+      \ DB8978A7 9786FC3E AA815FC6 7D9550CB 71014CBB 7DA87736 8933E624\n  1175E258 622275B0 792727A6 8D65D133\
+      \ 6147C3E2 939012C9 3424E4F7 EB249239\n  B80664BC 33619048 02E45230 AB33\n  \tquit\n!\n!\nmemory\
+      \ free low-watermark processor 79866\n!\n!\nspanning-tree mode rapid-pvst\n!\n!\n!\n!\n!\n!\n!\n\
+      !\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\ninterface Ethernet0/0\n description DIRECT_TO_BRANCH-R1\n\
+      \ ip address 10.255.0.1 255.255.255.252\n ip ospf network point-to-point\n ip ospf 10 area 0\n ip\
+      \ ospf cost 10\n!\ninterface Ethernet0/1\n description TO_TRANSIT-R1\n ip address 10.255.0.5 255.255.255.252\n\
+      \ ip ospf network point-to-point\n ip ospf 10 area 0\n ip ospf cost 50\n!\ninterface Ethernet0/2\n\
+      \ description TRUNK_TO_HQ-SW1\n no ip address\n!\ninterface Ethernet0/2.10\n description EMPLOYEES_GATEWAY\n\
+      \ encapsulation dot1Q 10\n ip address 10.10.0.1 255.255.252.0\n ip ospf 10 area 0\n!\ninterface\
+      \ Ethernet0/2.20\n description SERVERS_GATEWAY\n encapsulation dot1Q 20\n ip address 10.10.4.1 255.255.252.0\n\
+      \ ip ospf 10 area 0\n!\ninterface Ethernet0/2.30\n description GUESTS_GATEWAY\n encapsulation dot1Q\
+      \ 30\n ip address 10.10.8.1 255.255.252.0\n ip access-group HQ-GUEST-IN in\n ip ospf 10 area 0\n\
+      !\ninterface Ethernet0/2.99\n description MANAGEMENT_GATEWAY\n encapsulation dot1Q 99\n ip address\
+      \ 10.10.12.1 255.255.255.0\n ip ospf 10 area 0\n!\ninterface Ethernet0/3\n no ip address\n shutdown\n\
+      !\nrouter ospf 10\n router-id 1.1.1.1\n passive-interface default\n no passive-interface Ethernet0/0\n\
+      \ no passive-interface Ethernet0/1\n!\nip forward-protocol nd\n!\n!\nip http server\nip http secure-server\n\
+      ip ssh bulk-mode 131072\n!\nip access-list extended HQ-GUEST-IN\n 10 remark Allow guest gateway\
+      \ ping\n 10 permit icmp 10.10.8.0 0.0.3.255 host 10.10.8.1 echo\n 20 remark Block guest access to\
+      \ internal addressing\n 20 deny ip any 10.0.0.0 0.255.255.255\n 30 remark Permit remaining traffic\
+      \ from guest subnet\n 30 permit ip 10.10.8.0 0.0.3.255 any\nno logging btrace\n!\n!\n!\ncontrol-plane\n\
+      !\n!\n!\nline con 0\n exec-timeout 0 0\n activation-character 13\n logging synchronous\nline aux\
+      \ 0\n activation-character 13\nline vty 0 4\n exec-timeout 0 0\n activation-character 13\n login\n\
+      \ transport input ssh\n!\n!\n!\n!\nend"
+  cpu_limit: null
+  cpus: null
+  data_volume: null
+  hide_links: false
+  id: n0
+  image_definition: null
+  label: HQ-R1
+  node_definition: iol-xe
+  parameters: {}
+  priority: null
+  pyats:
+    username: null
+    password: null
+    enable_password: null
+  ram: null
+  tags: []
+  x: -300
+  y: 0
+  interfaces:
+  - id: i0
+    label: Loopback0
+    mac_address: null
+    type: loopback
+  - id: i1
+    label: Ethernet0/0
+    mac_address: null
+    type: physical
+    slot: 0
+  - id: i2
+    label: Ethernet0/1
+    mac_address: null
+    type: physical
+    slot: 1
+  - id: i3
+    label: Ethernet0/2
+    mac_address: null
+    type: physical
+    slot: 2
+  - id: i4
+    label: Ethernet0/3
+    mac_address: null
+    type: physical
+    slot: 3
+- boot_disk_size: null
+  configuration:
+  - name: ios_config.txt
+    content: "!\n! Last configuration change at 21:39:14 UTC Fri Nov 6 2026\n!\nversion 17.18\nservice\
+      \ timestamps debug datetime msec\nservice timestamps log datetime msec\n!\nhostname BRANCH-R1\n\
+      !\nboot-start-marker\nboot-end-marker\n!\n!\nno logging console\nno aaa new-model\n!\n!\n!\n!\n\
+      !\n!\n!\n!\n!\n!\n!\n!\n!\nip cef\nlogin on-success log\nno ipv6 cef\n!\n!\n!\n!\n!\n!\n!\n!\n!\n\
+      !\ncrypto pki trustpoint TP-self-signed-2039833\n enrollment selfsigned\n subject-name cn=IOS-Self-Signed-Certificate-2039833\n\
+      \ revocation-check none\n rsakeypair TP-self-signed-2039833\n hash sha512\n!\n!\ncrypto pki certificate\
+      \ chain TP-self-signed-2039833\n certificate self-signed 01\n  3082032A 30820212 A0030201 02020101\
+      \ 300D0609 2A864886 F70D0101 0D050030\n  2E312C30 2A060355 04030C23 494F532D 53656C66 2D536967 6E65642D\
+      \ 43657274\n  69666963 6174652D 32303339 38333330 1E170D32 36313130 36313433 3030385A\n  170D3336\
+      \ 31313035 31343330 30385A30 2E312C30 2A060355 04030C23 494F532D\n  53656C66 2D536967 6E65642D 43657274\
+      \ 69666963 6174652D 32303339 38333330\n  82012230 0D06092A 864886F7 0D010101 05000382 010F0030 82010A02\
+      \ 82010100\n  FB09AAF7 6FE27FB1 2B3A07CC 50A3566C 2DCAFF0C A1BCEC2B 77E29F54 86CEBC3A\n  A164F62D\
+      \ BD373496 E396F2EC 07ECBB3D EAB57A1F 2D4C495D 29A59E12 ECDCFEC7\n  149D27F6 D25AFDD6 7198CA23 53D09F10\
+      \ F058617F A4D29C5D 5CCC654D 751ED66C\n  36C69B4E CA4B81E9 C94C191F 65C0C1A5 EEB3D768 AEEE806F DD144D0A\
+      \ AB094393\n  D6E0F5AC FF934B6C 683C9159 9FFFAC6E 39855395 4BADBCDA 41A8FDA9 A6E86BC3\n  F7589B18\
+      \ 929EF4E9 C5DB6DD2 73F95215 F8F0B912 ACA9129D 63AA1B9D D06CDF18\n  3751FFBA 20BBD6EC 637B788B 1F00FB80\
+      \ D6E2E3FC 8A50DA91 C43CA00C 46A3C118\n  5992385E 9E3A0733 651ACA9D 378176C6 F650ADEA A1B9CECA 2E088393\
+      \ B8CF0AF9\n  02030100 01A35330 51301D06 03551D0E 04160414 E95D2AA2 ACDD6B27 C4A3F4F3\n  0501C55A\
+      \ 525D00FC 301F0603 551D2304 18301680 14E95D2A A2ACDD6B 27C4A3F4\n  F30501C5 5A525D00 FC300F06 03551D13\
+      \ 0101FF04 05300301 01FF300D 06092A86\n  4886F70D 01010D05 00038201 0100C005 C5AB2E08 4E92CE7F D902237E\
+      \ F9A95C89\n  6F105CA5 B33F73AC 8D58065A 34C07D4E 4116341A 7FBC0487 73C16821 E16009D6\n  66C3D767\
+      \ 47A63D05 92BE00CD 3A7B62BF 579FF19C 53073DC7 1A7C70FA 89B9AF76\n  92BB5BE6 2BBEDB4A C85F00E2 0A793422\
+      \ AE96E900 BD804CE3 E8F0D704 5AACF3A5\n  C2E97AED A8F70D59 F0FA03C8 419970D2 4B92433C BE9979B1 38252D98\
+      \ EFC37A43\n  124AEF44 0D678E67 0E49730D 7C9073B0 AA2F59F7 400CB149 9E3F8A4F 8AEE07DD\n  FC768888\
+      \ 1B03080F DE7B58E9 D9299493 85F5480E 0F8419D0 EF3EFB38 73C41E49\n  BEF6369D 855482B3 65FBB978 F24DBE95\
+      \ A9F706DF D28B3060 6A94F909 663CB387\n  9DD83DA2 A640149C 54015E97 82EE\n  \tquit\n!\n!\nmemory\
+      \ free low-watermark processor 79866\n!\n!\nspanning-tree mode rapid-pvst\n!\n!\n!\n!\n!\n!\n!\n\
+      !\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\ninterface Ethernet0/0\n description DIRECT_TO_HQ-R1\n\
+      \ ip address 10.255.0.2 255.255.255.252\n ip ospf network point-to-point\n ip ospf 10 area 0\n ip\
+      \ ospf cost 10\n!\ninterface Ethernet0/1\n description TO_TRANSIT-R1\n ip address 10.255.0.10 255.255.255.252\n\
+      \ ip ospf network point-to-point\n ip ospf 10 area 0\n ip ospf cost 50\n!\ninterface Ethernet0/2\n\
+      \ description TRUNK_TO_BRANCH-SW1\n no ip address\n!\ninterface Ethernet0/2.10\n description EMPLOYEES_GATEWAY\n\
+      \ encapsulation dot1Q 10\n ip address 10.11.0.1 255.255.252.0\n ip ospf 10 area 0\n!\ninterface\
+      \ Ethernet0/2.99\n description MANAGEMENT_GATEWAY\n encapsulation dot1Q 99\n ip address 10.11.12.1\
+      \ 255.255.255.0\n ip ospf 10 area 0\n!\ninterface Ethernet0/3\n no ip address\n shutdown\n!\nrouter\
+      \ ospf 10\n router-id 2.2.2.2\n passive-interface default\n no passive-interface Ethernet0/0\n no\
+      \ passive-interface Ethernet0/1\n!\nip forward-protocol nd\n!\n!\nip http server\nip http secure-server\n\
+      ip ssh bulk-mode 131072\nno logging btrace\n!\n!\n!\ncontrol-plane\n!\n!\n!\nline con 0\n exec-timeout\
+      \ 0 0\n activation-character 13\n logging synchronous\nline aux 0\n activation-character 13\nline\
+      \ vty 0 4\n exec-timeout 0 0\n activation-character 13\n login\n transport input ssh\n!\n!\n!\n\
+      !\nend"
+  cpu_limit: null
+  cpus: null
+  data_volume: null
+  hide_links: false
+  id: n1
+  image_definition: null
+  label: BRANCH-R1
+  node_definition: iol-xe
+  parameters: {}
+  priority: null
+  pyats:
+    username: null
+    password: null
+    enable_password: null
+  ram: null
+  tags: []
+  x: 300
+  y: 0
+  interfaces:
+  - id: i0
+    label: Loopback0
+    mac_address: null
+    type: loopback
+  - id: i1
+    label: Ethernet0/0
+    mac_address: null
+    type: physical
+    slot: 0
+  - id: i2
+    label: Ethernet0/1
+    mac_address: null
+    type: physical
+    slot: 1
+  - id: i3
+    label: Ethernet0/2
+    mac_address: null
+    type: physical
+    slot: 2
+  - id: i4
+    label: Ethernet0/3
+    mac_address: null
+    type: physical
+    slot: 3
+- boot_disk_size: null
+  configuration:
+  - name: ios_config.txt
+    content: "!\n! Last configuration change at 21:39:14 UTC Fri Nov 6 2026\n!\nversion 17.18\nservice\
+      \ timestamps debug datetime msec\nservice timestamps log datetime msec\n!\nhostname TRANSIT-R1\n\
+      !\nboot-start-marker\nboot-end-marker\n!\n!\nno logging console\nno aaa new-model\n!\n!\n!\n!\n\
+      !\n!\n!\n!\n!\n!\n!\n!\n!\nip cef\nlogin on-success log\nno ipv6 cef\n!\n!\n!\n!\n!\n!\n!\n!\n!\n\
+      !\ncrypto pki trustpoint TP-self-signed-2039835\n enrollment selfsigned\n subject-name cn=IOS-Self-Signed-Certificate-2039835\n\
+      \ revocation-check none\n rsakeypair TP-self-signed-2039835\n hash sha512\n!\n!\ncrypto pki certificate\
+      \ chain TP-self-signed-2039835\n certificate self-signed 01\n  3082032A 30820212 A0030201 02020101\
+      \ 300D0609 2A864886 F70D0101 0D050030\n  2E312C30 2A060355 04030C23 494F532D 53656C66 2D536967 6E65642D\
+      \ 43657274\n  69666963 6174652D 32303339 38333530 1E170D32 36313130 36323131 3532355A\n  170D3336\
+      \ 31313035 32313135 32355A30 2E312C30 2A060355 04030C23 494F532D\n  53656C66 2D536967 6E65642D 43657274\
+      \ 69666963 6174652D 32303339 38333530\n  82012230 0D06092A 864886F7 0D010101 05000382 010F0030 82010A02\
+      \ 82010100\n  9FA2CCEA B065D180 6B34CC80 1B372763 E93E9989 F3AA7100 43420D08 4E8CC24A\n  C04D2A03\
+      \ 1812C41E 6C8F0687 C60161DC 4DCF60A4 4D9E9D63 FDDA4292 73BCAF3F\n  CFBC46B7 92A24AC6 4312BA5B C5729330\
+      \ DDCB38F5 50356E2E D57126A3 3C3AF136\n  FBFA60DC 0027B68E 7F039BE0 385DBE39 3002F872 9C9C8BFA 1310A1C4\
+      \ 0438ACCA\n  EE5C7BA6 527300EE 24133613 3F39F215 2E032DE8 8064F9F9 30AFEB2D CF22ED4D\n  C412535B\
+      \ C6A126B0 D363A6C8 6662C058 4640FA50 523D0891 E4D41EC9 C276F230\n  86F19B4F AAB6F9A4 49CC665E 389EB6B9\
+      \ 81688C08 213F66FD 2760E9C1 5B0E01F6\n  03CED5D1 195292C9 68841446 25936BBC 95CB6FF9 8E7CD5D0 7E44B50E\
+      \ 0630B5E5\n  02030100 01A35330 51301D06 03551D0E 04160414 5129966F 54EDA478 B263A2D6\n  C15D5C50\
+      \ C0ED258A 301F0603 551D2304 18301680 14512996 6F54EDA4 78B263A2\n  D6C15D5C 50C0ED25 8A300F06 03551D13\
+      \ 0101FF04 05300301 01FF300D 06092A86\n  4886F70D 01010D05 00038201 0100797C 0ACE77F0 5935E9F1 43C2E1C2\
+      \ 96BC4805\n  5B30D771 82E762BA 9165F45D 04D961FD 7CA0D39B C9B686F5 168962F0 671D774D\n  C4974901\
+      \ F239E619 1A9F0E54 AFABA929 486B4DD4 36CF6871 E6551A37 91C9BEEE\n  158BC217 DFAF0B5C F8918CF5 DA4E82DB\
+      \ 417B2421 8179B18E 4502B8B0 EE352098\n  49E53F8E 9F3B5FA6 642BC823 EFC35C05 DD964555 9B8F14DA 4FBE3D33\
+      \ C4823917\n  966552DB 0414092F D914E055 2445DC3C F31A5ACA 3D23E4C5 448FA99B 0C01554B\n  B350630B\
+      \ B02EF4EF 2D0E0995 AB3898CA 0E8739D5 810A74D2 F2213C0B E29F7FD4\n  A56E20B1 EC9FE7D8 9F7CDBBF 430BB3C9\
+      \ 6EACF80A EB6E21A2 EE3BFFC7 0F0EFB98\n  5183EFD0 6B0BDFE2 17ED3E3E AF4E\n  \tquit\n!\n!\nmemory\
+      \ free low-watermark processor 79866\n!\n!\nspanning-tree mode rapid-pvst\n!\n!\n!\n!\n!\n!\n!\n\
+      !\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\ninterface Ethernet0/0\n description TO_HQ-R1\n ip\
+      \ address 10.255.0.6 255.255.255.252\n ip ospf network point-to-point\n ip ospf 10 area 0\n ip ospf\
+      \ cost 50\n!\ninterface Ethernet0/1\n description TO_BRANCH-R1\n ip address 10.255.0.9 255.255.255.252\n\
+      \ ip ospf network point-to-point\n ip ospf 10 area 0\n ip ospf cost 50\n!\ninterface Ethernet0/2\n\
+      \ no ip address\n shutdown\n!\ninterface Ethernet0/3\n no ip address\n shutdown\n!\nrouter ospf\
+      \ 10\n router-id 3.3.3.3\n passive-interface default\n no passive-interface Ethernet0/0\n no passive-interface\
+      \ Ethernet0/1\n!\nip forward-protocol nd\n!\n!\nip http server\nip http secure-server\nip ssh bulk-mode\
+      \ 131072\nno logging btrace\n!\n!\n!\ncontrol-plane\n!\n!\n!\nline con 0\n exec-timeout 0 0\n activation-character\
+      \ 13\n logging synchronous\nline aux 0\n activation-character 13\nline vty 0 4\n exec-timeout 0\
+      \ 0\n activation-character 13\n login\n transport input ssh\n!\n!\n!\n!\nend"
+  cpu_limit: null
+  cpus: null
+  data_volume: null
+  hide_links: false
+  id: n2
+  image_definition: null
+  label: TRANSIT-R1
+  node_definition: iol-xe
+  parameters: {}
+  priority: null
+  pyats:
+    username: null
+    password: null
+    enable_password: null
+  ram: null
+  tags: []
+  x: 0
+  y: -240
+  interfaces:
+  - id: i0
+    label: Loopback0
+    mac_address: null
+    type: loopback
+  - id: i1
+    label: Ethernet0/0
+    mac_address: null
+    type: physical
+    slot: 0
+  - id: i2
+    label: Ethernet0/1
+    mac_address: null
+    type: physical
+    slot: 1
+  - id: i3
+    label: Ethernet0/2
+    mac_address: null
+    type: physical
+    slot: 2
+  - id: i4
+    label: Ethernet0/3
+    mac_address: null
+    type: physical
+    slot: 3
+- boot_disk_size: null
+  configuration:
+  - name: ios_config.txt
+    content: "!\n! Last configuration change at 14:23:32 UTC Sat Nov 7 2026\n!\nversion 17.18\nservice\
+      \ timestamps debug datetime msec\nservice timestamps log datetime msec\n!\nhostname HQ-SW1\n!\n\
+      boot-start-marker\nboot-end-marker\n!\n!\nno logging console\nno aaa new-model\n!\n!\n!\n!\n!\n\
+      !\n!\n!\n!\n!\n!\n!\n!\nip audit notify log\nip audit po max-events 100\nip cef\nlogin on-success\
+      \ log\nno ipv6 cef\n!\n!\n!\n!\n!\n!\n!\nvtp mode transparent\n!\ncrypto pki trustpoint TP-self-signed-2039831\n\
+      \ enrollment selfsigned\n subject-name cn=IOS-Self-Signed-Certificate-2039831\n revocation-check\
+      \ none\n rsakeypair TP-self-signed-2039831\n hash sha512\n!\n!\ncrypto pki certificate chain TP-self-signed-2039831\n\
+      \ certificate self-signed 01\n  3082032A 30820212 A0030201 02020101 300D0609 2A864886 F70D0101 0D050030\n\
+      \  2E312C30 2A060355 04030C23 494F532D 53656C66 2D536967 6E65642D 43657274\n  69666963 6174652D\
+      \ 32303339 38333130 1E170D32 36313130 36313433 3030325A\n  170D3336 31313035 31343330 30325A30 2E312C30\
+      \ 2A060355 04030C23 494F532D\n  53656C66 2D536967 6E65642D 43657274 69666963 6174652D 32303339 38333130\n\
+      \  82012230 0D06092A 864886F7 0D010101 05000382 010F0030 82010A02 82010100\n  96555AFD 1B03DADA\
+      \ 70EC3954 5F6A3CC6 6B4D56DD 48E9EB44 B135CB16 B1FC2B6D\n  2D73B962 3795A7B6 DD2D322B 1489C714 156D12DA\
+      \ 41C3AC5E 046111E8 989CD83F\n  37CB544A EC132E9A 0F5834DE DFBDDDD7 6702CD8C A9117D07 3FA22E29 5E5BA472\n\
+      \  4F02AC2B B89F6A2D B6B6A6A6 8B204981 5607ACE7 7B266084 07496E4E 2BB232D7\n  5F7B703B 3E40B215\
+      \ F39ECCC1 CF25D94E 67703D7B FAC7CDF7 9634DD58 E6F73A6B\n  594AB22B 4FDA0B06 ADA951D4 E2F93D25 8666AA19\
+      \ 9B50A4A7 99D577C9 6E98798B\n  ACF50C00 6A5C3DF7 06C1B75F 25BA442D 983576BC 3E407F36 8B9576C0 708E53A8\n\
+      \  81B061C0 5B48788A 9D6E548A 18B929F0 C64B7A84 6F04652A A0102EB4 61A500F3\n  02030100 01A35330\
+      \ 51301D06 03551D0E 04160414 788F3463 AB8DC7B4 6018F941\n  EA59079E A0C2B741 301F0603 551D2304 18301680\
+      \ 14788F34 63AB8DC7 B46018F9\n  41EA5907 9EA0C2B7 41300F06 03551D13 0101FF04 05300301 01FF300D 06092A86\n\
+      \  4886F70D 01010D05 00038201 01004DCA 8A6182B6 019FFA34 CD7CD6E7 2E015396\n  5868D542 E2AB2177\
+      \ 398365E3 20FA85C2 F1B5CB13 F0EAB2B5 62674EA8 63D801F3\n  B6AF4D3D 7039ACEE AD6C6BC1 D4FD1041 09F7E336\
+      \ F79607A5 85BABB01 88E01B42\n  9A38C083 FE5F2D55 F1056EEC 262A6443 8D33C9CB C69562A6 7ECB34FD F00787A9\n\
+      \  F0C11DBD 8BEBC768 95675198 550F7BC3 64D06003 9AE422C5 13236076 C7FADCE3\n  96C060A1 CF1353AA\
+      \ 9CEEF621 FD01C7BE 842AB477 5CC4D154 7050EE93 CA4C2D21\n  6750CBA2 65EA45A0 6E034241 C5E11684 D8A4B418\
+      \ 3DEE331C 6023D38B A1E46245\n  E1905172 97B5BE3A 229FEB59 0163756F B5854BB8 5DE7A752 36DA98E3 B9AB0C6D\n\
+      \  A607DE92 F6D791C9 4C21FD7C 044F\n  \tquit\n!\n!\nmemory free low-watermark processor 79236\n\
+      !\n!\nspanning-tree mode rapid-pvst\nspanning-tree extend system-id\n!\n!\nvlan internal allocation\
+      \ policy ascending\n!\nvlan 10\n name EMPLOYEES\n!\nvlan 20\n name SERVERS\n!\nvlan 30\n name GUESTS\n\
+      !\nvlan 99\n name MANAGEMENT\n!\n!\n!\n!\n!\ninterface Ethernet0/0\n description HQ-R1\n switchport\
+      \ trunk encapsulation dot1q\n switchport trunk allowed vlan 10,20,30,99\n switchport mode trunk\n\
+      !\ninterface Ethernet0/1\n description HQ-PC\n switchport access vlan 10\n switchport mode access\n\
+      !\ninterface Ethernet0/2\n description HQ-SERVER\n switchport access vlan 20\n switchport mode access\n\
+      !\ninterface Ethernet0/3\n description HQ-GUEST\n switchport access vlan 30\n switchport mode access\n\
+      !\nip forward-protocol nd\n!\n!\nip http server\nip http secure-server\nip ssh bulk-mode 131072\n\
+      !\nno logging btrace\n!\n!\n!\ncontrol-plane\n!\n!\n!\nline con 0\n exec-timeout 0 0\n logging synchronous\n\
+      line aux 0\nline vty 0 4\n exec-timeout 0 0\n login\n transport input ssh\n!\n!\nend"
+  cpu_limit: null
+  cpus: null
+  data_volume: null
+  hide_links: false
+  id: n3
+  image_definition: null
+  label: HQ-SW1
+  node_definition: ioll2-xe
+  parameters: {}
+  priority: null
+  pyats:
+    username: null
+    password: null
+    enable_password: null
+  ram: null
+  tags: []
+  x: -300
+  y: 220
+  interfaces:
+  - id: i0
+    label: Loopback0
+    mac_address: null
+    type: loopback
+  - id: i1
+    label: Ethernet0/0
+    mac_address: null
+    type: physical
+    slot: 0
+  - id: i2
+    label: Ethernet0/1
+    mac_address: null
+    type: physical
+    slot: 1
+  - id: i3
+    label: Ethernet0/2
+    mac_address: null
+    type: physical
+    slot: 2
+  - id: i4
+    label: Ethernet0/3
+    mac_address: null
+    type: physical
+    slot: 3
+- boot_disk_size: null
+  configuration:
+  - name: ios_config.txt
+    content: "!\n! Last configuration change at 14:23:32 UTC Sat Nov 7 2026\n!\nversion 17.18\nservice\
+      \ timestamps debug datetime msec\nservice timestamps log datetime msec\n!\nhostname BRANCH-SW1\n\
+      !\nboot-start-marker\nboot-end-marker\n!\n!\nno logging console\nno aaa new-model\n!\n!\n!\n!\n\
+      !\n!\n!\n!\n!\n!\n!\n!\n!\nip audit notify log\nip audit po max-events 100\nip cef\nlogin on-success\
+      \ log\nno ipv6 cef\n!\n!\n!\n!\n!\n!\n!\nvtp mode transparent\n!\ncrypto pki trustpoint TP-self-signed-2039834\n\
+      \ enrollment selfsigned\n subject-name cn=IOS-Self-Signed-Certificate-2039834\n revocation-check\
+      \ none\n rsakeypair TP-self-signed-2039834\n hash sha512\n!\n!\ncrypto pki certificate chain TP-self-signed-2039834\n\
+      \ certificate self-signed 01\n  3082032A 30820212 A0030201 02020101 300D0609 2A864886 F70D0101 0D050030\n\
+      \  2E312C30 2A060355 04030C23 494F532D 53656C66 2D536967 6E65642D 43657274\n  69666963 6174652D\
+      \ 32303339 38333430 1E170D32 36313130 36313433 3031315A\n  170D3336 31313035 31343330 31315A30 2E312C30\
+      \ 2A060355 04030C23 494F532D\n  53656C66 2D536967 6E65642D 43657274 69666963 6174652D 32303339 38333430\n\
+      \  82012230 0D06092A 864886F7 0D010101 05000382 010F0030 82010A02 82010100\n  F75D8895 1A4C57A9\
+      \ 083D42C2 D8E40ECC 61987360 0EC3F772 11B5CF67 4C08EE94\n  DB7C3C52 C060963A 9A609B15 BBC3AE83 094EFE99\
+      \ 7914A17B F5F45BB0 280A5EBB\n  3F0656F4 94D96C13 7467CBF2 60A1CDFC F6B6BE93 1B7DE318 AB970A33 00F4996E\n\
+      \  574972E6 9C223DCB E3A8EA5C 18B25491 DA128DDD FE483644 31DC07FD 135F927D\n  3F5167FB 2C18DD81\
+      \ 61F2C546 DAEEEC8F 85C769AB 1B59CB0C C54F9480 A9C56AC0\n  342A1CBE 179DD3F9 C7D2770D E689DEBC FC4AFFF6\
+      \ BE6C75FF 2E52529A ED76C638\n  8CD27AF7 E953798C 0B7677EF D9937EAB 3946C393 3E7FE4E2 E52B2A0A 05B09DD0\n\
+      \  44019103 0B6A4F45 2CD48265 830EA8D7 D2A3AD60 3C348BFC A9557AEB 667449C3\n  02030100 01A35330\
+      \ 51301D06 03551D0E 04160414 15DBC794 47F7BF4A 3E7459C5\n  92901E08 476EC052 301F0603 551D2304 18301680\
+      \ 1415DBC7 9447F7BF 4A3E7459\n  C592901E 08476EC0 52300F06 03551D13 0101FF04 05300301 01FF300D 06092A86\n\
+      \  4886F70D 01010D05 00038201 010004B3 83F345E1 7FCCAE26 EBF2589F 2E31F383\n  B21951B1 B682ECC5\
+      \ 26E3706A 56485913 272C9CF3 6F97E3EB 77EA1CC3 71CB6F76\n  DBBDA4D2 F6E1FD31 D25F4D99 3CF2B67D 77876690\
+      \ 449725A5 AB97EB3B 645FFB12\n  AFED26D1 BFCCE7B3 E6D719B0 5AEA226C F803E55E 3BB64F52 F796125D FF04250C\n\
+      \  2D1FEE47 D87F81D9 195CEEB4 6F087262 1CC57DD8 D69E47D8 B73D7591 FD49F77F\n  3381632A 1FEA4F63\
+      \ 1500DC37 90AB8924 FE4FE492 F3A6950B A116C523 714C9459\n  E83C72BE 8B651D43 E1CC590D 85E1F285 95047DD4\
+      \ 3E093CE4 5E1B221B EEF88A3E\n  69A2F52D C8412330 E645A466 DC8C8CCF DDCEBAA9 171EA1BA 667AEC5D E388E6EA\n\
+      \  36574059 A2200D09 A234CD06 1569\n  \tquit\n!\n!\nmemory free low-watermark processor 79236\n\
+      !\n!\nspanning-tree mode rapid-pvst\nspanning-tree extend system-id\n!\n!\nvlan internal allocation\
+      \ policy ascending\n!\nvlan 10\n name EMPLOYEES\n!\nvlan 99\n name MANAGEMENT\n!\n!\n!\n!\n!\ninterface\
+      \ Ethernet0/0\n description TRUNK_TO_BRANCH-R1\n switchport trunk encapsulation dot1q\n switchport\
+      \ trunk allowed vlan 10,99\n switchport mode trunk\n!\ninterface Ethernet0/1\n description BRANCH-PC\n\
+      \ switchport access vlan 10\n switchport mode access\n!\ninterface Ethernet0/2\n!\ninterface Ethernet0/3\n\
+      !\nip forward-protocol nd\n!\n!\nip http server\nip http secure-server\nip ssh bulk-mode 131072\n\
+      !\nno logging btrace\n!\n!\n!\ncontrol-plane\n!\n!\n!\nline con 0\n exec-timeout 0 0\n logging synchronous\n\
+      line aux 0\nline vty 0 4\n exec-timeout 0 0\n login\n transport input ssh\n!\n!\nend"
+  cpu_limit: null
+  cpus: null
+  data_volume: null
+  hide_links: false
+  id: n4
+  image_definition: null
+  label: BRANCH-SW1
+  node_definition: ioll2-xe
+  parameters: {}
+  priority: null
+  pyats:
+    username: null
+    password: null
+    enable_password: null
+  ram: null
+  tags: []
+  x: 300
+  y: 220
+  interfaces:
+  - id: i0
+    label: Loopback0
+    mac_address: null
+    type: loopback
+  - id: i1
+    label: Ethernet0/0
+    mac_address: null
+    type: physical
+    slot: 0
+  - id: i2
+    label: Ethernet0/1
+    mac_address: null
+    type: physical
+    slot: 1
+  - id: i3
+    label: Ethernet0/2
+    mac_address: null
+    type: physical
+    slot: 2
+  - id: i4
+    label: Ethernet0/3
+    mac_address: null
+    type: physical
+    slot: 3
+- boot_disk_size: null
+  configuration:
+  - name: node.cfg
+    content: "# This script is sourced at boot\nhostname HQ-PC\necho HQ-PC > /etc/hostname\n\n# Configurable\
+      \ user account\nUSERNAME=cisco\nPASSWORD=REPLACE_LOCALLY\n\n# Persistent network configuration\n\
+      cat > /etc/network/interfaces <<'EOF'\nauto lo\niface lo inet loopback\n\nauto eth0\niface eth0\
+      \ inet static\n    address 10.10.0.10\n    netmask 255.255.252.0\n    gateway 10.10.0.1\nEOF\n\n\
+      # Apply networking for this boot\nip link set eth0 up\nip addr replace 10.10.0.10/22 dev eth0\n\
+      ip route replace default via 10.10.0.1"
+  cpu_limit: null
+  cpus: null
+  data_volume: null
+  hide_links: false
+  id: n5
+  image_definition: null
+  label: HQ-PC
+  node_definition: alpine
+  parameters: {}
+  priority: null
+  pyats:
+    username: null
+    password: null
+    enable_password: null
+  ram: null
+  tags: []
+  x: -520
+  y: 440
+  interfaces:
+  - id: i0
+    label: eth0
+    mac_address: null
+    type: physical
+    slot: 0
+- boot_disk_size: null
+  configuration:
+  - name: node.cfg
+    content: "# This script is sourced at boot\nhostname HQ-SERVER\necho HQ-SERVER > /etc/hostname\n\n\
+      # Configurable user account\nUSERNAME=cisco\nPASSWORD=REPLACE_LOCALLY\n\n# Persistent network configuration\n\
+      cat > /etc/network/interfaces <<'EOF'\nauto lo\niface lo inet loopback\n\nauto eth0\niface eth0\
+      \ inet static\n    address 10.10.4.10\n    netmask 255.255.252.0\n    gateway 10.10.4.1\nEOF\n\n\
+      # Apply networking for this boot\nip link set eth0 up\nip addr replace 10.10.4.10/22 dev eth0\n\
+      ip route replace default via 10.10.4.1"
+  cpu_limit: null
+  cpus: null
+  data_volume: null
+  hide_links: false
+  id: n6
+  image_definition: null
+  label: HQ-SERVER
+  node_definition: alpine
+  parameters: {}
+  priority: null
+  pyats:
+    username: null
+    password: null
+    enable_password: null
+  ram: null
+  tags: []
+  x: -300
+  y: 440
+  interfaces:
+  - id: i0
+    label: eth0
+    mac_address: null
+    type: physical
+    slot: 0
+- boot_disk_size: null
+  configuration:
+  - name: node.cfg
+    content: "# This script is sourced at boot\nhostname HQ-GUEST\necho HQ-GUEST > /etc/hostname\n\n#\
+      \ Configurable user account\nUSERNAME=cisco\nPASSWORD=REPLACE_LOCALLY\n\n# Persistent network configuration\n\
+      cat > /etc/network/interfaces <<'EOF'\nauto lo\niface lo inet loopback\n\nauto eth0\niface eth0\
+      \ inet static\n    address 10.10.8.10\n    netmask 255.255.252.0\n    gateway 10.10.8.1\nEOF\n\n\
+      # Apply networking for this boot\nip link set eth0 up\nip addr replace 10.10.8.10/22 dev eth0\n\
+      ip route replace default via 10.10.8.1"
+  cpu_limit: null
+  cpus: null
+  data_volume: null
+  hide_links: false
+  id: n7
+  image_definition: null
+  label: HQ-GUEST
+  node_definition: alpine
+  parameters: {}
+  priority: null
+  pyats:
+    username: null
+    password: null
+    enable_password: null
+  ram: null
+  tags: []
+  x: -80
+  y: 440
+  interfaces:
+  - id: i0
+    label: eth0
+    mac_address: null
+    type: physical
+    slot: 0
+- boot_disk_size: null
+  configuration:
+  - name: node.cfg
+    content: "# This script is sourced at boot\nhostname BRANCH-PC\necho BRANCH-PC > /etc/hostname\n\n\
+      # Configurable user account\nUSERNAME=cisco\nPASSWORD=REPLACE_LOCALLY\n\n# Persistent network configuration\n\
+      cat > /etc/network/interfaces <<'EOF'\nauto lo\niface lo inet loopback\n\nauto eth0\niface eth0\
+      \ inet static\n    address 10.11.0.10\n    netmask 255.255.252.0\n    gateway 10.11.0.1\nEOF\n\n\
+      # Apply networking for this boot\nip link set eth0 up\nip addr replace 10.11.0.10/22 dev eth0\n\
+      ip route replace default via 10.11.0.1"
+  cpu_limit: null
+  cpus: null
+  data_volume: null
+  hide_links: false
+  id: n8
+  image_definition: null
+  label: BRANCH-PC
+  node_definition: alpine
+  parameters: {}
+  priority: null
+  pyats:
+    username: null
+    password: null
+    enable_password: null
+  ram: null
+  tags: []
+  x: 300
+  y: 440
+  interfaces:
+  - id: i0
+    label: eth0
+    mac_address: null
+    type: physical
+    slot: 0
+links:
+- id: l0
+  n1: n0
+  n2: n1
+  i1: i1
+  i2: i1
+  conditioning: {}
+  label: HQ-R1-Ethernet0/0<->BRANCH-R1-Ethernet0/0
+- id: l1
+  n1: n0
+  n2: n2
+  i1: i2
+  i2: i1
+  conditioning: {}
+  label: HQ-R1-Ethernet0/1<->TRANSIT-R1-Ethernet0/0
+- id: l2
+  n1: n2
+  n2: n1
+  i1: i2
+  i2: i2
+  conditioning: {}
+  label: TRANSIT-R1-Ethernet0/1<->BRANCH-R1-Ethernet0/1
+- id: l3
+  n1: n0
+  n2: n3
+  i1: i3
+  i2: i1
+  conditioning: {}
+  label: HQ-R1-Ethernet0/2<->HQ-SW1-Ethernet0/0
+- id: l4
+  n1: n1
+  n2: n4
+  i1: i3
+  i2: i1
+  conditioning: {}
+  label: BRANCH-R1-Ethernet0/2<->BRANCH-SW1-Ethernet0/0
+- id: l5
+  n1: n3
+  n2: n5
+  i1: i2
+  i2: i0
+  conditioning: {}
+  label: HQ-SW1-Ethernet0/1<->HQ-PC-eth0
+- id: l6
+  n1: n3
+  n2: n6
+  i1: i3
+  i2: i0
+  conditioning: {}
+  label: HQ-SW1-Ethernet0/2<->HQ-SERVER-eth0
+- id: l7
+  n1: n3
+  n2: n7
+  i1: i4
+  i2: i0
+  conditioning: {}
+  label: HQ-SW1-Ethernet0/3<->HQ-GUEST-eth0
+- id: l8
+  n1: n4
+  n2: n8
+  i1: i2
+  i2: i0
+  conditioning: {}
+  label: BRANCH-SW1-Ethernet0/1<->BRANCH-PC-eth0
+lab:
+  description: 'Two-site enterprise lab: VLANs, router-on-a-stick, OSPF, ACLs and WAN failover.'
+  notes: 'Training and LinkedIn portfolio project. Portfolio copy includes extracted device configurations.
+    Set host PASSWORD placeholders locally before starting. Switch VLAN definitions were added from the
+    verified design because extraction omitted the VLAN database.
+
+    HQ allocation 10.10.0.0/16; branch 10.11.0.0/16; WAN reserve 10.255.0.0/16.
+
+    HQ VLAN10 employees 10.10.0.0/22 GW 10.10.0.1; VLAN20 servers 10.10.4.0/22 GW 10.10.4.1; VLAN30 guests
+    10.10.8.0/22 GW 10.10.8.1; VLAN99 management 10.10.12.0/24 GW 10.10.12.1.
+
+    Branch VLAN10 employees 10.11.0.0/22 GW 10.11.0.1; VLAN99 management 10.11.12.0/24 GW 10.11.12.1.
+
+    WAN HQ-Branch 10.255.0.0/30 HQ .1 Branch .2; HQ-Transit 10.255.0.4/30 HQ .5 Transit .6; Transit-Branch
+    10.255.0.8/30 Transit .9 Branch .10.
+
+    Target: single-area OSPF area0, prefer direct link using explicit costs; passive LAN interfaces. No
+    site summarization in this single-area design.
+
+    Stages: VLANs/trunks, router subinterfaces/hosts, WAN/OSPF, ACLs, measured failover.
+
+    Hosts planned: HQ-PC 10.10.0.10/22; HQ-SERVER 10.10.4.10/22; HQ-GUEST 10.10.8.10/22; BRANCH-PC 10.11.0.10/22.'
+  title: Resilient HQ and Branch - Portable Validation
+  node_staging:
+    enabled: false
+    start_remaining: true
+    abort_on_failure: false
+  version: 0.3.1
